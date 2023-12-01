@@ -1,10 +1,10 @@
 # Taiko Research
 
-This repository holds research ideas, investigations and results for Taiko's zkEVM.
+This repository holds research ideas, investigations, and results for Taiko's zkEVM.
 
 # License
 
-Licensed and distributed under
+alt cuvant and distributed under
 
 * MIT license: [LICENSE](LICENSE) or http://opensource.org/licenses/MIT
 
