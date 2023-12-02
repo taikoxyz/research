@@ -7,14 +7,14 @@ The Modular Inversion by Means of the Binary Extended Euclidean Algorithm:
 */
 // Computes the multiplicative inverse of x modulo n by applying the binary  
 // Extended Euclidean Algorithm. For applying this method n must be odd,   
-// x and n must be coprime (because if they are not comprime, the inverse  
+// x and n must be coprime (because if they are not coprime, the inverse  
 // does not exist), both x and n must be positive
 fn mod_inv(x: i64, n: i64) -> i64 {
     let (mut a, mut b, mut u, mut v) = (x, n, 1, 0);
     // Now a = x, b = n;
     // (1) b is odd; (2) u < n and v < n; (3) a = u * x (mod n);  
     // (4) b = v * x (mod n); (5) GCD(a, b) = GCD(x, n) = 1; 
-    // (6) a, b, u and v are non-negative. 
+    // (6) a, b, u, and v are non-negative. 
     // In each iteration we perform the transformation of a and b as well as  
     // their accompanying coefficients u and v, which preserves (1)-(6) and 
     // decreases a + b. Thus, when a is 0, b is 1 due to (5), so v is the 
@@ -41,7 +41,7 @@ fn mod_inv(x: i64, n: i64) -> i64 {
         }
         // Here a is even and (1)-(6) are satisfied. We divide a by 2 and still 
         // satisfy (5), since b is odd due to (1) and GCD(p, q) = GCD(p / 2, q) 
-        // for even p and odd q. As the result, only (3) is not satisfied 
+        // for even p and odd q. As a result, only (3) is not satisfied 
         a >>= 1;
         // In order to satisfy (3) without breaking (1)-(2) and (4)-(6),   
         // u should be set to u * 2^(-1) mod n. If u is even, it is done by  
